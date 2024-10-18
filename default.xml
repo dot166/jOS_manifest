@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
+  
+  <remote  name="jos"
+           fetch="https://github.com/dot166/"
+           revision="refs/heads/16" />
+  
   <remote  name="grapheneos"
            fetch="https://github.com/GrapheneOS/"
-           revision="refs/heads/16" />
+	  revision="refs/tags/2025070100" />
   <remote  name="grapheneos-gitlab"
            fetch="https://gitlab.com/grapheneos/"
-           revision="refs/heads/16" />
+           revision="refs/tags/2025070100" />
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
@@ -18,7 +22,7 @@
   <contactinfo bugurl="go/repo-bug" />
 
   <!-- BEGIN open-source projects -->
-  <project path="build/make" name="platform_build" groups="pdk,sysui-studio" remote="grapheneos" >
+  <project path="build/make" name="platform_build" groups="pdk,sysui-studio" remote="jos" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -33,7 +37,7 @@
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="pdk" />
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/pesto" name="platform/build/pesto" groups="pdk" />
-  <project path="build/release" name="platform_build_release" groups="pdk,tradefed,sysui-studio" remote="grapheneos" />
+  <project path="build/release" name="platform_build_release" groups="pdk,tradefed,sysui-studio" remote="jos" />
   <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed,sysui-studio" remote="grapheneos" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
@@ -41,7 +45,7 @@
   <project path="art" name="platform_art" groups="pdk" remote="grapheneos" />
   <project path="bionic" name="platform_bionic" groups="pdk" remote="grapheneos" />
   <project path="bootable/deprecated-ota" name="platform/bootable/deprecated-ota" groups="pdk-cw" />
-  <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="grapheneos" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="jos" />
   <project path="bootable/libbootloader" name="platform/bootable/libbootloader" groups="vts,pdk" />
   <project path="branding" name="branding" remote="grapheneos" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
@@ -140,7 +144,6 @@
   <project path="external/arm-neon-tests" name="platform/external/arm-neon-tests" groups="vendor" />
   <project path="external/arm-optimized-routines" name="platform/external/arm-optimized-routines" groups="pdk" />
   <project path="external/arm-trusted-firmware" name="platform/external/arm-trusted-firmware" groups="pdk" />
-  <project path="external/Auditor" name="platform_external_Auditor" remote="grapheneos" clone-depth="1" />
   <project path="external/auto" name="platform/external/auto" groups="pdk" />
   <project path="external/autotest" name="platform/external/autotest" groups="pdk-fs" />
   <project path="external/android-nn-driver" name="platform/external/android-nn-driver" groups="pdk-lassen,pdk-gs-arm" />
@@ -299,7 +302,6 @@
   <project path="external/igt-gpu-tools" name="platform/external/igt-gpu-tools" groups="pdk" />
   <project path="external/image_io" name="platform/external/image_io" groups="pdk" />
   <project path="external/ims" name="platform/external/ims" groups="pdk" />
-  <project path="external/Info" name="platform_external_Info" groups="pdk-fs" remote="grapheneos" clone-depth="1" />
   <project path="external/intel-media-driver" name="platform/external/intel-media-driver" groups="pdk" />
   <project path="external/iperf3" name="platform/external/iperf3" groups="pdk" />
   <project path="external/iproute2" name="platform/external/iproute2" groups="pdk" />
@@ -644,7 +646,7 @@
   <project path="external/zucchini" name="platform/external/zucchini" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk,sysui-studio" />
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="grapheneos" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="jos" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -661,11 +663,11 @@
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="grapheneos" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
-  <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/opt/calendar" name="platform_frameworks_opt_calendar" groups="pdk-cw-fs,pdk-fs" remote="jos" />
   <project path="frameworks/opt/car/services" name="platform/frameworks/opt/car/services" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/car/setupwizard" name="platform/frameworks/opt/car/setupwizard" groups="pdk" />
   <project path="frameworks/opt/chips" name="platform/frameworks/opt/chips" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/opt/colorpicker" name="platform_frameworks_opt_colorpicker" groups="pdk-cw-fs,pdk-fs" remote="jos" />
   <project path="frameworks/opt/localepicker" name="platform/frameworks/opt/localepicker" />
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
@@ -673,7 +675,7 @@
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" groups="pdk,sysui-studio" remote="grapheneos" />
-  <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/opt/timezonepicker" name="platform_frameworks_opt_timezonepicker" groups="pdk-cw-fs,pdk-fs" remote="jos" />
   <project path="frameworks/opt/tv/tvsystem" name="platform/frameworks/opt/tv/tvsystem" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/proto_logging" name="platform/frameworks/proto_logging" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
@@ -706,7 +708,8 @@
   <project path="hardware/samsung/nfc" name="platform/hardware/samsung/nfc" groups="pdk" />
   <project path="hardware/synaptics/wlan" name="platform/hardware/synaptics/wlan" groups="pdk" />
   <project path="hardware/ti/am57x" name="platform/hardware/ti/am57x" groups="pdk" />
-  <project path="kernel/configs" name="kernel/configs" groups="vts,pdk" />
+  <project path="j-lib" name="jOS_j-lib" revision="main" remote="jos" />
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" />
   <project path="kernel/prebuilts/6.1/arm64" name="kernel/prebuilts/6.1/arm64" groups="pdk" clone-depth="1" />
   <project path="kernel/prebuilts/6.1/x86_64" name="kernel/prebuilts/6.1/x86-64" groups="pdk" clone-depth="1" />
   <project path="kernel/prebuilts/6.6/arm64" name="kernel/prebuilts/6.6/arm64" groups="pdk" clone-depth="1" />
@@ -731,7 +734,6 @@
   <project path="packages/apps/AppCompatConfig" name="platform_packages_apps_AppCompatConfig" groups="pdk-fs" remote="grapheneos" />
   <project path="packages/apps/AvatarPicker" name="platform/packages/apps/AvatarPicker" groups="pdk-fs" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Calendar" name="platform_packages_apps_Calendar" groups="pdk-fs" remote="grapheneos" />
   <project path="packages/apps/Car/CalendarPrebuilt" name="platform/packages/apps/Car/CalendarPrebuilt" groups="pdk-fs" clone-depth="1" />
   <project path="packages/apps/Car/SystemUI" name="platform/packages/apps/Car/SystemUI" groups="pdk-fs,pdk-cw-tvc" />
   <project path="packages/apps/Car/Cluster" name="platform/packages/apps/Car/Cluster" groups="pdk-fs" />
@@ -762,19 +764,21 @@
   <project path="packages/apps/CellBroadcastReceiver" name="platform_packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="grapheneos" />
-  <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" groups="pdk-fs" remote="grapheneos" />
+  <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" groups="pdk-fs" remote="jos" />
   <project path="packages/apps/DevCamera" name="platform/packages/apps/DevCamera" groups="pdk" />
   <project path="packages/apps/DeviceDiagnostics" name="platform/packages/apps/DeviceDiagnostics" groups="pdk" />
-  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" groups="pdk-fs" remote="grapheneos" />
+  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" groups="pdk-fs" remote="jos" />
   <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" />
   <project path="packages/apps/EmergencyInfo" name="platform_packages_apps_EmergencyInfo" groups="pdk-fs" remote="grapheneos" />
-  <project path="packages/apps/ExactCalculator" name="platform_packages_apps_ExactCalculator" remote="grapheneos" />
+  <project path="packages/apps/Etar" name="platform_packages_apps_Etar" groups="pdk-fs" remote="jos" />
+  <project path="packages/apps/ExactCalculator" name="platform_packages_apps_ExactCalculator" remote="jos" />
   <project path="packages/apps/Gallery2" name="platform_packages_apps_Gallery2" groups="pdk-fs" remote="grapheneos" />
   <project path="packages/apps/GmsCompat" name="platform_packages_apps_GmsCompat" groups="pdk-fs" remote="grapheneos" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/ImsServiceEntitlement" name="platform/packages/apps/ImsServiceEntitlement" groups="pdk-fs" />
+  <project path="packages/apps/jOS" name="jOS-System" remote="jos" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" groups="pdk-fs" />
-  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="grapheneos" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="jos" />
   <project path="packages/apps/LogViewer" name="platform_packages_apps_LogViewer" groups="pdk-fs" remote="grapheneos" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" />
   <project path="external/android_onboarding" name="platform/external/android_onboarding" groups="pdk-fs" />
@@ -788,29 +792,30 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="pdk-fs" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" groups="pdk-fs" />
   <project path="packages/apps/QuickAccessWallet" name="platform/packages/apps/QuickAccessWallet" groups="pdk-fs" />
+  <project path="packages/apps/Recorder" name="platform_packages_apps_Recorder" remote="jos" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="platform/packages/apps/SafetyRegulatoryInfo" groups="pdk-fs" />
   <project path="packages/apps/SampleLocationAttribution" name="platform/packages/apps/SampleLocationAttribution" groups="pdk-fs" />
   <project path="packages/apps/SecureElement" name="platform/packages/apps/SecureElement" groups="apps_se,pdk-fs,pdk-cw-fs" />
   <project path="packages/apps/Seedvault" name="platform_packages_apps_Seedvault" remote="grapheneos" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="grapheneos" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="jos" />
   <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="grapheneos" />
-  <project path="packages/apps/SetupWizard2" name="platform_packages_apps_SetupWizard2" remote="grapheneos" />
+  <project path="packages/apps/SetupWizard2" name="platform_packages_apps_SetupWizard2" remote="jos" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" groups="apps_stk,pdk-fs" />
   <project path="packages/apps/StorageManager" name="platform_packages_apps_StorageManager" groups="pdk-fs" remote="grapheneos" />
   <project path="packages/apps/SystemUIGo" name="platform/packages/apps/SystemUIGo" groups="pdk-fs" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" groups="pdk-fs" />
   <project path="packages/apps/Test/connectivity" name="platform/packages/apps/Test/connectivity" groups="pdk" />
-  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="grapheneos" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="jos" />
   <project path="packages/apps/Traceur" name="platform/packages/apps/Traceur" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
   <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" groups="pdk-fs,pdk-cw-tvc" />
   <project path="packages/apps/TvFeedbackConsent" name="platform/packages/apps/TvFeedbackConsent" groups="pdk-fs" />
   <project path="packages/apps/TvSystemUI" name="platform/packages/apps/TvSystemUI" groups="pdk-fs" />
   <project path="packages/apps/TV" name="platform/packages/apps/TV" groups="pdk" />
   <project path="packages/apps/UniversalMediaPlayer" name="platform/packages/apps/UniversalMediaPlayer" />
-  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="grapheneos" />
+  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="jos" />
   <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="grapheneos" />
-  <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" groups="pdk-fs" remote="grapheneos" />
+  <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" groups="pdk-fs" remote="jos" />
   <project path="packages/inputmethods/LeanbackIME" name="platform/packages/inputmethods/LeanbackIME" groups="pdk-fs" />
   <project path="packages/modules/adb" name="platform_packages_modules_adb" groups="pdk" remote="grapheneos" />
   <project path="packages/modules/AdServices" name="platform/packages/modules/AdServices" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
@@ -874,7 +879,7 @@
   <project path="packages/services/Iwlan" name="platform/packages/services/Iwlan" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/services/Mms" name="platform_packages_services_Mms" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" />
   <project path="packages/services/Mtp" name="platform/packages/services/Mtp" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="jos" />
   <project path="packages/services/Telephony" name="platform_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="grapheneos" />
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" groups="pdk-fs" />
   <project path="pdk" name="platform/pdk" groups="pdk" />
@@ -941,7 +946,7 @@
   <project path="prebuilts/vndk/v32" name="platform/prebuilts/vndk/v32" groups="pdk" clone-depth="1" />
   <project path="prebuilts/vndk/v33" name="platform/prebuilts/vndk/v33" groups="pdk" clone-depth="1" />
   <project path="prebuilts/vndk/v34" name="platform/prebuilts/vndk/v34" groups="pdk" clone-depth="1" />
-  <project path="script" name="script" remote="grapheneos" />
+  <project path="script" name="script" remote="jos" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/apex" name="platform/system/apex" groups="pdk" />
   <project path="system/authgraph" name="platform/system/authgraph" groups="pdk" />
