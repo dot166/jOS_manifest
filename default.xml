@@ -10,7 +10,7 @@
            revision="refs/heads/15-qpr2" />
   <remote  name="grapheneos-gitlab"
            fetch="https://gitlab.com/grapheneos/"
-           revision="refs/tags/2025020200" />
+           revision="refs/tags/2025020500" />
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
