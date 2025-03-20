@@ -3,7 +3,7 @@
   
   <remote  name="jos"
            fetch="https://github.com/dot166/"
-           revision="refs/heads/15-qpr2" />
+           revision="refs/tags/20250320j" />
   
   <remote  name="grapheneos"
            fetch="https://github.com/GrapheneOS/"
