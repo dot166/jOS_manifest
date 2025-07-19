@@ -7,10 +7,10 @@
   
   <remote  name="grapheneos"
            fetch="https://github.com/GrapheneOS/"
-	  revision="refs/tags/2025070800" />
+	  revision="refs/tags/2025071900" />
   <remote  name="grapheneos-gitlab"
            fetch="https://gitlab.com/grapheneos/"
-           revision="refs/tags/2025070800" />
+           revision="refs/tags/2025071900" />
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
