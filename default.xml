@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="jos" fetch="https://github.com/dot166/" revision="refs/heads/16"/>
+  <remote name="jos" fetch="https://github.com/dot20251024j6/" revision="refs/heads/20251024j"/>
   <remote name="grapheneos" fetch="https://github.com/GrapheneOS/" revision="refs/tags/2025102300"/>
   <remote name="grapheneos-gitlab" fetch="https://gitlab.com/grapheneos/" revision="refs/tags/2025102300"/>
   <remote name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/"/>
-  <default revision="refs/tags/android-16.0.0_r1" remote="aosp" sync-j="4"/>
-  <superproject name="platform/superproject" remote="aosp" revision="android-16.0.0_r1"/>
+  <default revision="refs/tags/android-20251024j.0.0_r1" remote="aosp" sync-j="4"/>
+  <superproject name="platform/superproject" remote="aosp" revision="android-20251024j.0.0_r1"/>
   <contactinfo bugurl="go/repo-bug"/>
   <project path="art" name="platform_art" groups="pdk" remote="grapheneos" aosp-name="platform/art"/>
   <project path="bionic" name="platform_bionic" groups="pdk" remote="grapheneos" aosp-name="platform/bionic"/>
@@ -228,7 +228,7 @@
   <project path="external/flatbuffers" name="platform/external/flatbuffers" groups="pdk"/>
   <project path="external/fmtlib" name="platform/external/fmtlib" groups="pdk"/>
   <project path="external/fonttools" name="platform/external/fonttools" groups="pdk"/>
-  <project path="external/FP16" name="platform/external/FP16" groups="pdk"/>
+  <project path="external/FP20251024j" name="platform/external/FP20251024j" groups="pdk"/>
   <project path="external/freetype" name="platform/external/freetype" groups="pdk"/>
   <project path="external/fsck_msdos" name="platform/external/fsck_msdos" groups="pdk"/>
   <project path="external/fsverity-utils" name="platform/external/fsverity-utils" groups="pdk"/>
