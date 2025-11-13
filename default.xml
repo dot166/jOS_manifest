@@ -11,7 +11,7 @@
   <project path="bionic" name="platform_bionic" groups="pdk" remote="grapheneos" aosp-name="platform/bionic"/>
   <project path="bootable/deprecated-ota" name="platform/bootable/deprecated-ota" groups="pdk-cw"/>
   <project path="bootable/libbootloader" name="platform/bootable/libbootloader" groups="vts,pdk"/>
-  <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="jos" aosp-name="platform/bootable/recovery"/>
+  <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="grapheneos" aosp-name="platform/bootable/recovery"/>
   <project path="branding" name="branding" remote="grapheneos"/>
   <project path="build/bazel" name="platform/build/bazel" groups="pdk">
     <linkfile src="bazel.WORKSPACE" dest="WORKSPACE"/>
