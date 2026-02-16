@@ -690,6 +690,7 @@
   <project path="kernel/tests" name="kernel/tests" groups="vts,pdk"/>
   <project path="libcore" name="platform_libcore" groups="pdk" remote="grapheneos" aosp-name="platform/libcore"/>
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk"/>
+  <project path="misc" name="misc" revision="main" remote="jos"/>
   <project path="packages/apps/AppCompatConfig" name="platform_packages_apps_AppCompatConfig" groups="pdk-fs" remote="grapheneos"/>
   <project path="packages/apps/AvatarPicker" name="platform/packages/apps/AvatarPicker" groups="pdk-fs"/>
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs"/>
@@ -908,7 +909,7 @@
   <project path="prebuilts/vndk/v32" name="platform/prebuilts/vndk/v32" groups="pdk" clone-depth="1"/>
   <project path="prebuilts/vndk/v33" name="platform/prebuilts/vndk/v33" groups="pdk" clone-depth="1"/>
   <project path="prebuilts/vndk/v34" name="platform/prebuilts/vndk/v34" groups="pdk" clone-depth="1"/>
-  <project path="script" name="script" remote="jos"/>
+  <project path="script" name="script" remote="grapheneos"/>
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs"/>
   <project path="system/apex" name="platform/system/apex" groups="pdk"/>
   <project path="system/authgraph" name="platform/system/authgraph" groups="pdk"/>
