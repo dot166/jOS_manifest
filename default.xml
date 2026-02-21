@@ -610,6 +610,7 @@
   <project path="external/zstd" name="platform/external/zstd" groups="pdk"/>
   <project path="external/zucchini" name="platform/external/zucchini" groups="pdk"/>
   <project path="external/zxing" name="platform/external/zxing" groups="pdk"/>
+  <project path="FocusLock" name="FocusLock" revision="main" remote="jos"/>
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk,sysui-studio"/>
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="jos" aosp-name="platform/frameworks/base"/>
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk"/>
