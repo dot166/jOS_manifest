@@ -395,6 +395,7 @@
   <project path="external/mpdecimal" name="platform/external/mpdecimal" groups="pdk"/>
   <project path="external/ms-tpm-20-ref" name="platform/external/ms-tpm-20-ref" groups="pdk"/>
   <project path="external/mtools" name="platform/external/mtools" groups="pdk"/>
+  <project path="external/Music" name="platform_external_Music" remote="jos" clone-depth="1"/>
   <project path="external/musl" name="platform/external/musl" groups="pdk"/>
   <project path="external/nanohttpd" name="platform/external/nanohttpd" groups="pdk"/>
   <project path="external/nanopb-c" name="platform/external/nanopb-c" groups="pdk"/>
@@ -744,7 +745,6 @@
   <project path="packages/apps/LogViewer" name="platform_packages_apps_LogViewer" groups="pdk-fs" remote="grapheneos"/>
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs"/>
   <project path="packages/apps/Multiuser" name="platform/packages/apps/Multiuser" groups="pdk-fs"/>
-  <project path="packages/apps/Music" name="platform_packages_apps_Music" groups="pdk-fs" remote="jos" aosp-name="platform/packages/apps/Music"/>
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs"/>
   <project path="packages/apps/NetworkLocation" name="platform_packages_apps_NetworkLocation" groups="pdk-fs" remote="grapheneos"/>
   <project path="packages/apps/OnDeviceAppPrediction" name="platform/packages/apps/OnDeviceAppPrediction" groups="pdk-fs"/>
