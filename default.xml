@@ -181,6 +181,7 @@
   <project path="external/flashrom" name="platform/external/flashrom" groups="pdk"/>
   <project path="external/flatbuffers" name="platform/external/flatbuffers" groups="pdk"/>
   <project path="external/fmtlib" name="platform/external/fmtlib" groups="pdk"/>
+  <project path="external/FocusLock" name="platform_external_FocusLock" revision="main" remote="jos"/>
   <project path="external/fonttools" name="platform/external/fonttools" groups="pdk"/>
   <project path="external/FP16" name="platform/external/FP16" groups="pdk"/>
   <project path="external/freetype" name="platform/external/freetype" groups="pdk"/>
@@ -403,6 +404,7 @@
   <project path="external/neon_2_sse" name="platform/external/neon_2_sse" groups="pdk"/>
   <project path="external/neven" name="platform/external/neven" groups="pdk"/>
   <project path="external/newfs_msdos" name="platform/external/newfs_msdos" groups="pdk"/>
+  <project path="external/NightStand" name="platform_external_NightStand" revision="main" remote="jos"/>
   <project path="external/nist-pkits" name="platform/external/nist-pkits" groups="pdk"/>
   <project path="external/nist-sip" name="platform/external/nist-sip" groups="pdk"/>
   <project path="external/noto-fonts" name="platform/external/noto-fonts" groups="pdk"/>
@@ -611,7 +613,6 @@
   <project path="external/zstd" name="platform/external/zstd" groups="pdk"/>
   <project path="external/zucchini" name="platform/external/zucchini" groups="pdk"/>
   <project path="external/zxing" name="platform/external/zxing" groups="pdk"/>
-  <project path="FocusLock" name="FocusLock" revision="main" remote="jos"/>
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk,sysui-studio"/>
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="jos" aosp-name="platform/frameworks/base"/>
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk"/>
